@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos y conexión al style.css -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Lia Alvarez">
+  <meta name="description" content="SupplyMatch es una plataforma digital que conecta empresas, emprendedores y PyMEs con proveedores confiables.">
+  <meta name="keywords" content="SupplyMatch, proveedores, empresas, PyMEs, emprendedores, membresías, proveedores confiables, negocios">
+  <title>SupplyMatch - Conecta con proveedores confiables</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ================= ENCABEZADO ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="#inicio" class="logo">
+        <img src="img/logo.png" alt="Logo de SupplyMatch">
+        SupplyMatch
+      </a>
+
+      <nav class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Membresías</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <button type="button" class="btn primary"
+          onclick="openWhatsApp('Hola, quiero conocer más sobre las membresías de SupplyMatch.')">
+          <i data-lucide="message-circle"></i>
+          Conocer más
+        </button>
+      </nav>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú"
+        aria-expanded="false" aria-controls="mobile-menu">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- MENÚ PARA CELULAR -->
+    <nav id="mobile-menu" class="mobile-nav" aria-label="Menú móvil">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Membresías</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <button type="button" class="btn primary"
+        onclick="openWhatsApp('Hola, quiero conocer más sobre las membresías de SupplyMatch.')">
+        <i data-lucide="message-circle"></i>
+        Conocer más
+      </button>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+
+        <div class="hero-text reveal">
+          <p class="eyebrow">Conecta. Encuentra. Crece.</p>
+          <h1>SUPPLYMATCH</h1>
+          <p class="lead">
+            Conectamos empresas, emprendedores y PyMEs con proveedores confiables de forma rápida,
+            segura y eficiente.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver membresías</a>
+            <button type="button" class="btn outline"
+              onclick="openWhatsApp('Hola, vi la página de SupplyMatch y quiero conocer sus servicios.')">
+              Conocer SupplyMatch
+            </button>
+          </div>
+
+          <p class="trust">
+            <i data-lucide="shield-check"></i>
+            Confianza y seguridad en cada conexión
+          </p>
+        </div>
+
+        <div class="hero-image reveal">
+          <img src="img/logo.png" alt="Logo de SupplyMatch">
+          <span class="tag tag-trust">Proveedores confiables</span>
+          <span class="tag tag-tech">Tecnología + confianza</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= PRODUCTOS / MEMBRESÍAS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">Planes para cada necesidad</p>
+          <h2>Conoce nuestras membresías</h2>
+          <p class="lead">
+            Elige la opción que mejor se adapte a las necesidades de tu empresa o negocio.
+          </p>
+        </div>
+
+        <div class="product-grid">
+
+          <!-- MEMBRESÍA FREEMIUM -->
+          <article class="product-card reveal">
+            <img src="img/membresia-basica.png" alt="Personas trabajando juntas en un equipo de negocios.">
+            <div class="product-body">
+              <span class="tag">Gratis</span>
+              <h3>Freemium</h3>
+              <p class="price">Gratis</p>
+              <p class="description">
+                Una opción para comenzar a conocer SupplyMatch y encontrar proveedores de acuerdo con
+                tus necesidades.
+              </p>
+              <button type="button" class="btn card"
+                onclick="openWhatsApp('Hola, quiero conocer más sobre la membresía Freemium de SupplyMatch.')">
+                Conocer membresía
+              </button>
+            </div>
+          </article>
+
+          <!-- PLAN PYME -->
+          <article class="product-card reveal">
+            <img src="img/membresia-profesional.png" alt="Equipo de trabajo analizando información empresarial.">
+            <div class="product-body">
+              <span class="tag">Más funciones</span>
+              <h3>Plan PyME</h3>
+              <p class="price">$399 MXN/mes</p>
+              <p class="description">
+                Incluye todo lo de Freemium, además de reportes de mercado y funciones avanzadas para
+                tu negocio.
+              </p>
+              <button type="button" class="btn card"
+                onclick="openWhatsApp('Hola, quiero conocer más sobre el Plan PyME de SupplyMatch.')">
+                Conocer membresía
+              </button>
+            </div>
+          </article>
+
+          <!-- PLAN EMPRESARIAL -->
+          <article class="product-card reveal">
+            <img src="img/membresia-empresarial.png" alt="Reunión empresarial y análisis de negocios.">
+            <div class="product-body">
+              <span class="tag">Completo</span>
+              <h3>Plan Empresarial</h3>
+              <p class="price">$999 MXN/mes</p>
+              <p class="description">
+                Incluye todo lo del Plan PyME, soporte técnico prioritario y herramientas de análisis.
+              </p>
+              <button type="button" class="btn card"
+                onclick="openWhatsApp('Hola, quiero conocer más sobre el Plan Empresarial de SupplyMatch.')">
+                Conocer membresía
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">¿Por qué SupplyMatch?</p>
+          <h2>Una plataforma pensada para conectar</h2>
+        </div>
+
+        <div class="benefits-grid">
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="search"></i></div>
+            <h3>Búsqueda de proveedores</h3>
+            <p>
+              Encuentra proveedores de acuerdo con las necesidades de tu empresa mediante búsqueda y
+              filtros.
+            </p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="shield-check"></i></div>
+            <h3>Confianza y seguridad</h3>
+            <p>
+              Buscamos generar conexiones más confiables entre empresas, emprendedores y proveedores.
+            </p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="bar-chart-3"></i></div>
+            <h3>Información para decidir</h3>
+            <p>
+              Los planes de pago ofrecen reportes de mercado y herramientas de análisis para apoyar la
+              toma de decisiones.
+            </p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="users"></i></div>
+            <h3>Conexión empresarial</h3>
+            <p>
+              Creamos un espacio digital donde proveedores y empresas pueden encontrarse de manera más
+              profesional.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+
+          <span class="tag tag-light">Modelo de ingresos</span>
+          <h2>Crece con SupplyMatch</h2>
+          <p>
+            Además de nuestras membresías, SupplyMatch contempla una comisión del 3% al 5% por cada
+            operación cerrada dentro de la plataforma.
+          </p>
+
+          <button id="offer-button" type="button" class="btn accent"
+            aria-expanded="false" aria-controls="offer-reveal"
+            onclick="revealOffer()">
+            Conocer beneficio
+          </button>
+
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">
+              Con SupplyMatch puedes encontrar nuevas oportunidades de conexión empresarial.
+            </p>
+
+            <div class="offer-code-row">
+              <span class="offer-code">SUPPLYMATCH</span>
+
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">
+                Copiar
+              </button>
+
+              <button type="button" class="btn whatsapp"
+                onclick="openWhatsApp('Hola, quiero conocer cómo funciona SupplyMatch y sus membresías.')">
+                Contactar
+              </button>
+            </div>
+
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">Código copiado</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experiencia SupplyMatch</p>
+          <h2>Lo que buscamos generar</h2>
+        </div>
+
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+
+            <!-- TESTIMONIO 1 -->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar"
+                    src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="Emprendedora trabajando en una empresa.">
+                  <div>
+                    <p class="name">Emprendedores</p>
+                    <p class="occasion">PyMEs</p>
+                  </div>
+                </div>
+                <p class="quote">
+                  "SupplyMatch busca facilitar la búsqueda de proveedores y reducir el tiempo que las
+                  empresas invierten en encontrar opciones confiables."
+                </p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+
+            <!-- TESTIMONIO 2 -->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar"
+                    src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="Profesional trabajando en una empresa.">
+                  <div>
+                    <p class="name">Empresas</p>
+                    <p class="occasion">Búsqueda de proveedores</p>
+                  </div>
+                </div>
+                <p class="quote">
+                  "La plataforma está pensada para ofrecer una forma más profesional de conectar con
+                  proveedores y descubrir nuevas oportunidades."
+                </p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+
+            <!-- TESTIMONIO 3 -->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar"
+                    src="https://images.pexels.com/photos/3768904/pexels-photo-3768904.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="Equipo de trabajo colaborando.">
+                  <div>
+                    <p class="name">Proveedores</p>
+                    <p class="occasion">Nuevas oportunidades</p>
+                  </div>
+                </div>
+                <p class="quote">
+                  "SupplyMatch busca crear conexiones entre proveedores y empresas dentro de un
+                  espacio digital basado en confianza y transparencia."
+                </p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- CONTROLES DEL CARRUSEL -->
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior">
+            <i data-lucide="arrow-left"></i>
+          </button>
+
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio">
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+
+        <div class="contact-text">
+          <p class="eyebrow">Estamos para ayudarte</p>
+          <h2>Conecta con SupplyMatch</h2>
+          <p class="lead">
+            Conoce nuestras membresías y descubre cómo SupplyMatch puede ayudarte a encontrar proveedores
+            de acuerdo con las necesidades de tu empresa.
+          </p>
+          <button type="button" class="btn primary"
+            onclick="openWhatsApp('Hola, quiero conocer más sobre SupplyMatch y sus membresías.')">
+            Contactar por WhatsApp
+          </button>
+        </div>
+
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li><i data-lucide="briefcase"></i> Empresas y PyMEs</li>
+            <li><i data-lucide="users"></i> Emprendedores</li>
+            <li><i data-lucide="store"></i> Proveedores</li>
+            <li><i data-lucide="shield-check"></i> Confianza y seguridad</li>
+          </ul>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">SupplyMatch</p>
+      <p class="slogan">Conectando oportunidades</p>
+      <nav class="footer-links">
+        <a href="#productos">Membresías</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp"
+    onclick="openWhatsApp('Hola, quiero conocer más sobre SupplyMatch.')">
+    <i data-lucide="message-circle"></i>
+  </button>
+
+  <!-- ================= SCRIPT ================= -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
